@@ -1,12 +1,88 @@
 
-# The Command Line
+# The Command Line + Git Review
 
-When conducting data science (or programming in general), its helpful to get orientated with the command line. On mac computers, this is the terminal application. The command line serves as a low level interpreter through which you, the user, can send commands directly to the computer. As a computer user, you previously have probably sent commands to the computer through a graphical user interface (GUI) such as a web browser, text editor, photo editor, or any other of the myriad of computer programs now in existence. While the command line is initially daunting with its cryptic looking text, we will quickly see some of the many advantages it can have.
+Recall from our first class several of the important command line keywords such as **pwd**, **cd**, and **ls**. If you need a brief review of these, see the day 1 materials (included below for your convenience).
+
+Also recall that best practices are to clone each lessons materials to your local machine for working. Here's a quick review of the process:
+    * Click on the Github link
+    * Fork the repository
+    * Copy the new (forked) url
+    * In terminal type `**git clone cmd+v**` (cmd+v to paste the copied url)
+        * Be sure to run the above command where you want to download the repository!
+        
+## Git add, commit and push
+Once you make changes to your forked copy of the repository (such as doing the labs, or your own explorations), you may also want to push those changes to the web to save and share your work with others. This would be a common practice amongst a work team where individuals might be sharing code with each other for various projects. To do this, you need three seperate steps:
+* adding changed files to be pushed to the web
+* commiting changes (stages files and adds descriptive comments regarding changes)
+* push changes (finalizes changes by pushing them to the web)
+
+
+# In the terminal, navigate to a cloned repository that you have worked on.
+
+Run the following:  
+#   ``` git status ```  
+You should see something like this:
+
+<img src='git_status.png'>
+
+# Add everything to be changed
+# ` git add --all`  
+
+Alternatively you could specify specific files or folders with `git add filename` or `git add foldername`.
+
+# You can continue to see the progress with `git status`
+Notice how everything's green indicating these files are changes we are about to commit.
+
+<img src='git_status2.png' width=600>
+
+# Commit your changes `git commit -m "your required comment"`
+The -m is a required option parameter for specifying a comment. This can be anything and is meant to help inform yourself and others as to what changes were made.
+
+## Again a quick look at `git status` is not required, but shows whats going on.
+
+<img src='git_status3.png' width=600>
+
+# Finally, push your changes `git push origin master`
+Origin and master refer to your git repositories **remote** and **branch**. For now, we don't have a need for setting up multiple remotes (locations) or branches (versions). Furthermore, origin and master are the default for both remotes and branches respectively, so just use the code as is for now.
+
+# Navigating to the github page online, you should now see your changes reflected!
+
+# Appendix: Notes from Day 1
 
 # Cloning Learn.co lessons to your local hard drive.
 
 One of the many useful features of the command line will be using git to clone local copies of the curricullum hosted on learn.co. This will allow you to work offline and save changes as you work through exercises and start programming!
 To start, **for mac users, open terminal**, **for Windows, open “Git Bash”**.
+
+# Cloning github repos and Learn.co lessons
+
+Now that you can navigate the file directory using the command line, you're ready to download some course materials from the web to your local environment.  
+
+* Create a folder on your computer for your course materials and navigate into it. 
+* Then create a subfolder titled "Day1" (or something similar) and navigate into that.
+
+* Return to your web browser and navigate to the lesson you want to download.
+* Click the github icon
+
+<img src="Learn_Github_Logo.png">
+
+You'll be redirected to the associated github repository like this.  
+* **Click the fork button**, as shown in order to create a copy to your personal account which you can edit and update.
+<img src="Github_Fork_Button.png">
+
+After a moment of this:
+<img src="Github_Forking_In_Progress.png" width=350>
+You'll be redirected to your new personal copy of the repository:
+<img src="Forked_Github_Page.png" width=700>
+## Finally: 
+* Press cmd+L to highlight the url bar and cmd+v to copy the url
+* Return to terminal (you should be in your "Day1" folder)
+* Type: **git clone** and paste your repo url (**cmd + v**)
+
+### Voila!  
+#### The repository and all of its contents will be downloaded locally to your computer!
+
+# Command Line Notes from Day 1
 
 # pwd
 
@@ -36,31 +112,3 @@ Also very useful is the wildcard paramter. For example, if you wanted to list al
 # mkdir
 
 Finally, as you continue to navigate the file directory from the command line it can be useful to be able to create new folders. To do this, use the **mkdir** command, which stands for **make directory**. Try it out with **mkdir NewFolderName**. Afterwards, use the **ls** command to see that there is indeed a new folder, and if you wish, move into the new folder using the **cd** command.
-
-# Cloning github repos and Learn.co lessons
-
-Now that you can navigate the file directory using the command line, you're ready to download some course materials from the web to your local environment.  
-
-* Create a folder on your computer for your course materials and navigate into it. 
-* Then create a subfolder titled "Day1" (or something similar) and navigate into that.
-
-* Return to your web browser and navigate to the lesson you want to download.
-* Click the github icon
-
-<img src="Learn_Github_Logo.png">
-
-You'll be redirected to the associated github repository like this.  
-* **Click the fork button**, as shown in order to create a copy to your personal account which you can edit and update.
-<img src="Github_Fork_Button.png">
-
-After a moment of this:
-<img src="Github_Forking_In_Progress.png" width=350>
-You'll be redirected to your new personal copy of the repository:
-<img src="Forked_Github_Page.png" width=700>
-## Finally: 
-* Press cmd+L to highlight the url bar and cmd+v to copy the url
-* Return to terminal (you should be in your "Day1" folder)
-* Type: **git clone** and paste your repo url (**cmd + v**)
-
-### Voila!  
-#### The repository and all of its contents will be downloaded locally to your computer!
